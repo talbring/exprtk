@@ -972,7 +972,7 @@ using namespace std;
             }
 
             template <typename T>
-            inline T modulus_impl(const T v0, const T v1, real_type_tag)
+            inline T modulus_impl(const T , const T , real_type_tag)
             {
                return 0.0;
             }
@@ -24502,7 +24502,7 @@ using namespace std;
                }
             }
 
-            if (vec_initilizer_list.size() > vector_size)
+            if (vec_initilizer_list.size() > uint(vector_size))
             {
                set_error(
                   make_error(parser_error::e_syntax,
@@ -27351,7 +27351,7 @@ using namespace std;
          case_stmt(details::  e_erf, details::  erf_op) \
          case_stmt(details:: e_erfc, details:: erfc_op) \
          case_stmt(details:: e_ncdf, details:: ncdf_op) \
-//         case_stmt(details::e_trunc, details::trunc_op) \
+//         case_stmt(details::e_trunc, details::trunc_op) 
 //         case_stmt(details:: e_frac, details:: frac_op)
 
          inline expression_node_ptr synthesize_uv_expression(const details::operator_type& operation,
